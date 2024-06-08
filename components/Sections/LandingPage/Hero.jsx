@@ -4,40 +4,36 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <div className="hero min-h-screen  grid bg-background-light pt-20 pb-10 px-20"   >
-        <div className="relative px-6 lg:px-8">
-   
-        <div className="mx-auto max-w-2xl py-8 sm:py-16 lg:py-24">
-          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-secondary-dark ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-              Hello, welcome to our home!
-            
-            </div>
-          </div>
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-6xl">
-            Automate your Business
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-secondary-dark">
-            Streamline processes, boost efficiency, and increase productivity with our automation services.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Link
+    <section className="min-h-screen bg-primary text-white flex flex-col-reverse md:flex-row justify-end gap-12 md:flex md:items-center md:justify-between px-6 py-24 sm:py-32 lg:overflow-visible lg:px-16">
+    <div className="sm:w-1/2 h-full max-w-xl text-center md:text-start">
+    <div className="hidden sm:mb-8 sm:flex ">
+        <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-100 ring-1 ring-gray-100/10 hover:ring-gray-100/20">
+          Hello, welcome to our home!
+        
+        </div>
+      </div>
+      <h1 className="font-extrabold text-6xl lg:text-7xl mb-4">Automate your Business</h1>
+      <p className="text-gray-200"> Streamline processes, boost efficiency, and increase productivity with our automation services.</p>
+
+       <div className="flex mt-8 space-x-4 justify-center md:justify-start text-sm ">  
+       <Link
                 href="/book-consultation"
-                className="rounded-md bg-primary text-white hover:bg-accent-orange px-3.5 py-2.5 text-sm font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
+                className="rounded-md bg-white text-primary hover:bg-accent-orange px-3.5 py-2.5 text-sm font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
               >
                 Get Started
               </Link>
-              <Link href="/services" className="text-sm font-semibold leading-6 text-secondary-dark">
-                Learn more <span aria-hidden="true">→</span>
-              </Link>
-            </div>
-          </div>
-        </div>
+       </div>
+    </div>
+
+    <div className="sm:w-1/2 md:h-full ">
+      <div className="relative lg:w-96 w-80 h-80 lg:h-96 mx-auto border  rounded-full">
+      <Image priority fill alt="" src={'/pic.jpg'} className="object-cover rounded-full border p-6"/>
       
       </div>
-      
-      </div>
+    </div>
+  
+    </section>
+
   
   )
 }
