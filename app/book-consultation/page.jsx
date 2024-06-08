@@ -1,21 +1,30 @@
 'use client'
 import Image from 'next/image'
 import { useRouter, useSearchParams } from 'next/navigation'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, Suspense } from 'react'
 import { collection, addDoc } from 'firebase/firestore'
 import { db } from '@/utils/firebase'
 import Steps from '@/components/UI/Steps'
+
+const SearchParamsComponent = ({ onParamsLoaded }) => {
+    const searchParams = useSearchParams()
+    const search = searchParams.get('name')
+    
+    useEffect(() => {
+        onParamsLoaded(search)
+    }, [search, onParamsLoaded])
+    
+    return null
+}
 
 const BookConsultation = () => { 
     const router = useRouter()
     const [selectedService, setSelectedService] = useState('')
     const [description, setDescription] = useState('')
-    const searchParams = useSearchParams()
-    const search = searchParams.get('name')
 
-    useEffect(() => {
+    const handleParamsLoaded = (search) => {
         setSelectedService(search)
-    }, [search])
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -39,9 +48,6 @@ const BookConsultation = () => {
 
                     <Steps/>
                     <form onSubmit={handleSubmit} className='mt-12 text-secondary'>
-                        {
-                            
-                        }
                         <div className='mt-8'>
                             <label className="block text-sm font-semibold leading-6 text-secondary-dark">Select a service</label>
                             <select
@@ -81,7 +87,10 @@ const BookConsultation = () => {
                     </form>
                 </div>
                 <div className='hidden md:block md:w-1/2 relative'>
-                    <Image src={'/consult.jpg'} fill alt='' className='object-cover rounded-l-2xl' />
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <Image src={'/consult.jpg'} fill alt='' className='object-cover rounded-l-2xl' />
+                        <SearchParamsComponent onParamsLoaded={handleParamsLoaded} />
+                    </Suspense>
                 </div>
             </div>
         </div>
