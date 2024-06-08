@@ -7,18 +7,18 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title:
-    "Web Development, Software Integration, & Business Process Automation | Your Company Name",
+    "Web Development, Software Integration, & Business Process Automation | Trexiti",
   description:
     "Expert web development, seamless software integration, and efficient business process automation services. Boost your business efficiency with our tailored solutions.",
   keywords:
     "web development, software integration, business process automation, web design, app development, enterprise solutions",
-  author: "Your Company Name",
+  author: "Trexiti",
   viewport: "width=device-width, initial-scale=1.0",
   robots: "index, follow",
   charset: "UTF-8",
   language: "en",
   ogTitle:
-    "Web Development, Software Integration, & Business Process Automation | Your Company Name",
+    "Web Development, Software Integration, & Business Process Automation | Trexiti",
   ogDescription:
     "Expert web development, seamless software integration, and efficient business process automation services. Boost your business efficiency with our tailored solutions.",
   ogType: "website",
@@ -26,7 +26,7 @@ export const metadata = {
   ogImage: "https://www.yourcompany.com/images/og-image.jpg",
   twitterCard: "summary_large_image",
   twitterTitle:
-    "Web Development, Software Integration, & Business Process Automation | Your Company Name",
+    "Web Development, Software Integration, & Business Process Automation | Trexiti",
   twitterDescription:
     "Expert web development, seamless software integration, and efficient business process automation services. Boost your business efficiency with our tailored solutions.",
   twitterImage: "https://www.yourcompany.com/images/twitter-image.jpg",
