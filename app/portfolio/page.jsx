@@ -5,25 +5,26 @@ const projects = [
   {
     id: 1,
     title: 'Limousine Bookings',
-    description: 'Revamped the user interface and experience for a leading e-commerce platform. Increased conversion rates by 25% and improved customer satisfaction.',
+    description: 'Developed a responsive and user-friendly booking system for a leading limousine service. Enhanced user experience and streamlined booking processes, significantly improving customer satisfaction.',
     imageUrl: '/callchris.png',
-    url:'https://www.callchrislimo.com'
+    url: 'https://www.callchrislimo.com'
   },
   {
     id: 2,
     title: 'Ecommerce Restaurant Platform',
-    description: 'Developed a custom inventory management system for a retail chain. Streamlined inventory tracking, ordering, and restocking processes, resulting in cost savings of over $50,000 per year.',
+    description: 'Created an e-commerce platform for a restaurant, enabling online ordering, delivery tracking, and customer feedback integration. Improved customer engagement and increased online sales.',
     imageUrl: '/njas2.png',
-    url:"https://njas-one-trexiti.vercel.app/"
+    url: 'https://njas-one-trexiti.vercel.app/'
   },
   {
     id: 3,
     title: 'Landing Page',
-    description: 'Designed and developed a mobile app for a startup in the health and fitness industry. The app provides personalized workout plans, nutrition tracking, and progress monitoring.',
+    description: 'Designed and developed a high-conversion landing page for a business consulting firm. Focused on clear messaging and call-to-action elements to drive lead generation and client acquisition.',
     imageUrl: '/neeks.png',
-    url:"https://www.neeksenterprises.com/"
+    url: 'https://www.neeksenterprises.com/'
   },
 ];
+
 
 
 const Portfolio = () => {

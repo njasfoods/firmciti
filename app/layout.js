@@ -30,8 +30,6 @@ export const metadata = {
   twitterDescription:
     "Expert web development, seamless software integration, and efficient business process automation services. Boost your business efficiency with our tailored solutions.",
   twitterImage: "https://www.yourcompany.com/images/twitter-image.jpg",
-  canonical: "https://www.yourcompany.com",
-  themeColor: "#000000",
 };
 
 export default function RootLayout({ children }) {
