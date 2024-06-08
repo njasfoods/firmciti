@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const projects = [
@@ -13,12 +14,14 @@ const projects = [
     title: 'Ecommerce Restaurant Platform',
     description: 'Developed a custom inventory management system for a retail chain. Streamlined inventory tracking, ordering, and restocking processes, resulting in cost savings of over $50,000 per year.',
     imageUrl: '/njas2.png',
+    url:"https://njas-one-trexiti.vercel.app/"
   },
   {
     id: 3,
     title: 'Landing Page',
     description: 'Designed and developed a mobile app for a startup in the health and fitness industry. The app provides personalized workout plans, nutrition tracking, and progress monitoring.',
     imageUrl: '/neeks.png',
+    url:"https://www.neeksenterprises.com/"
   },
 ];
 
@@ -34,14 +37,17 @@ const Portfolio = () => {
 
         <ul className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
-            <li key={project.id} className="col-span-1 bg-background-veryLight rounded-lg shadow overflow-hidden">
-              <div className="aspect-w-16 aspect-h-9">
+            <li key={project.id} className="col-span-1 bg-gray-200 rounded-lg shadow overflow-hidden">
+              <Link target='_blank' href={project.url}>
+               <div className="aspect-w-16 aspect-h-9">
                 <img src={project.imageUrl} alt={project.title} className="object-cover object-center w-full h-52" />
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-bold text-secondary-dark mb-2">{project.title}</h3>
-                <p className="text-sm text-secondary-light">{project.description}</p>
+                <p className="text-sm text-secondary">{project.description}</p>
               </div>
+              </Link>
+             
             </li>
           ))}
         </ul>
