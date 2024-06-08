@@ -49,8 +49,8 @@ export default function HowWeWork() {
       <h1 className="text-3xl lg:text-5xl font-bold text-center text-secondary-dark">Service Offer</h1>
       <div className="mt-12 w-full">
         {services.map((service, index) => (
-          <div key={index} className={`flex ${service.reverse && 'flex-row-reverse justify-stretch'} gap-12 py-8 mt-4`}>
-            <div className="mb-16 w-1/2">
+          <div key={index} className={`flex flex-col md:flex-row ${service.reverse && 'md:flex-row-reverse md:justify-stretch'} gap-12 py-8 mt-4`}>
+            <div className="mb-16 w-full md:w-1/2">
               <h2 className="text-3xl font-bold mb-4 text-secondary">{service.title}</h2>
               <p className="text-secondary">{service.description}</p>
               <ul className="list-disc ml-4 mt-4 text-secondary">
@@ -63,8 +63,8 @@ export default function HowWeWork() {
                 <Link href={{pathname:'/book-consultation', query:{name:service.slug}}} className="px-6 inline-block py-2 rounded-md mt-8 bg-primary text-white hover:bg-accent-orange" type="button">Book Consultation</Link>
               </div>
             </div>
-            <div className="w-1/2 relative h-80">
-              <Image src={service.image} alt={service.title} fill className="object-cover rounded-2xl" />
+            <div className="hidden md:block md:w-1/2 relative h-80">
+              <Image src={service.image} priority alt={service.title} fill className="object-cover rounded-2xl" />
             </div>
           </div>
         ))}

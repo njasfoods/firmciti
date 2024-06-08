@@ -17,7 +17,7 @@ const Hero = () => {
 
        <div className="flex mt-8 space-x-4 justify-center md:justify-start text-sm ">  
        <Link
-                href="/book-consultation"
+                href="/services"
                 className="rounded-md bg-white text-primary hover:bg-accent-orange px-3.5 py-2.5 text-sm font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
               >
                 Get Started

@@ -22,14 +22,14 @@ export const metadata = {
   ogDescription:
     "Expert web development, seamless software integration, and efficient business process automation services. Boost your business efficiency with our tailored solutions.",
   ogType: "website",
-  ogUrl: "https://www.yourcompany.com",
-  ogImage: "https://www.yourcompany.com/images/og-image.jpg",
+  ogUrl: "https://www.trexiti.online",
+  ogImage: "https://www.trexiti.online/images/og-image.jpg",
   twitterCard: "summary_large_image",
   twitterTitle:
     "Web Development, Software Integration, & Business Process Automation | Trexiti",
   twitterDescription:
     "Expert web development, seamless software integration, and efficient business process automation services. Boost your business efficiency with our tailored solutions.",
-  twitterImage: "https://www.yourcompany.com/images/twitter-image.jpg",
+  twitterImage: "https://www.trexiti.online/images/twitter-image.jpg",
 };
 
 export default function RootLayout({ children }) {
