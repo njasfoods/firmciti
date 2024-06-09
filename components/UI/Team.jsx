@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const teamMembers = [
@@ -5,19 +6,19 @@ const teamMembers = [
     id: 1,
     name: 'Al Neville Hall',
     position: 'Lead Developer',
-    imageUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80'
+    imageUrl: '/neville.jpg'
   },
   {
     id: 2,
     name: 'Allisa Colemon',
     position: 'Client Officer',
-    imageUrl: 'https://images.unsplash.com/photo-1502767089025-6572583495b4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80'
+    imageUrl: '/alli.png'
   },
   {
     id: 3,
     name: 'Ike Chow',
     position: 'Lead Designer',
-    imageUrl: 'https://images.unsplash.com/photo-1520828314548-5f8da30b1edd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80'
+    imageUrl: '/ike.jpg'
   },
 ];
 
@@ -31,11 +32,16 @@ const Team = () => {
         <div className='grid gap-8 mt-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3'>
           {teamMembers.map(member => (
             <div key={member.id} className='w-full max-w-xs text-center'>
-              <img
-                className='object-cover object-center w-full h-48 mx-auto rounded-lg'
+              <div className="relative w-full h-64 mx-auto">
+                <Image
+                className='object-cover object-top rounded-lg'
                 src={member.imageUrl}
                 alt='avatar'
+                fill
+                priority
               />
+              </div>
+              
               <div className='mt-2'>
                 <h3 className='text-lg font-medium text-secondary-dark'>{member.name}</h3>
                 <span className='mt-1 font-medium text-secondary dark:text-gray-300'>{member.position}</span>
